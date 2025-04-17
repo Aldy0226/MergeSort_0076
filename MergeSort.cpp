@@ -4,6 +4,34 @@ using namespace std;
 int arr[20], B[20]; // Array utama dan array bantu
 int n; // Jumlah elemen dalam array
 
+void input()
+{ // Procedure Input
+while (true)
+{
+cout << "Masukkan panjang element array : "; // Membuat inputan jumlah element Array
+cin >> n; // Memanggil variable inputan n
+
+if (n <= 20)
+{ // Membuat kondisi n tidak lebih dari 20
+break;
+}
+else
+{
+    cout << "\nArray yang anda masukkan maksimal 20 Elemen.\n"; // Menampilkan Pesan jika data lebih dari 20
+}
+}
+cout << endl; // Membuat jarak per baris program
+cout << "======================" << endl; // Membuat tampilan susunan data element array
+cout << "Masukkan Element Array" << endl;
+cout << "======================" << endl;
+
+for (int i = 0; i < n; i++) // Menggunakan perulangan for untuk menyimpan data pada Array
+{
+    cout << "Data ke-" << (i + 1) << ": "; // Memasukkan atau menginputkan nilai data n
+    cin >> arr[i]; // Menyimpan nilai data n kedalam array arr
+}
+}
+
 void mergesort(int low, int high) {
     if (low >= high){ // step 1
         return; // step 1a
@@ -50,3 +78,4 @@ void mergesort(int low, int high) {
         arr[x] = B[x]; // step 5
     }
 }
+
