@@ -88,3 +88,11 @@ void output()
     }
     cout << endl;
 }
+
+int main()
+{
+    input();
+    mergesort(0, n - 1);
+    output();
+    return 0;
+}
