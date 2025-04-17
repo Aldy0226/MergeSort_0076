@@ -30,4 +30,23 @@ void mergesort(int low, int high) {
         }
         k++; // step 4d, k, 1
     }
+
+    while (j <= high) // step 4e
+    {
+        B[k] = arr[j]; // step 4e, j, 1
+        j++; // step 4e, j, 2
+        k++; // step 4e, k, 1
+    }
+
+    while (i <= mid)
+    {
+        B[k] = arr[i]; // step 4f, i, 1
+        i++; // step 4f, i, 2
+        k++; // step 4f, k, 1
+    }
+
+    for (int x = low; x <= high; x++)
+    {
+        arr[x] = B[x]; // step 5
+    }
 }
